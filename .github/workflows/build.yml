@@ -2,8 +2,8 @@ name: Build
 on:
   workflow_dispatch:
       inputs:
-        package_name:
-          description: "Package name of the game:"
+        package_name:                                                          
+          description: "com.miHoYo.enterprise.NGHSoD"
           required: true
 
 jobs:
@@ -23,5 +23,5 @@ jobs:
         ./gradlew :module:assembleRelease
     - uses: actions/upload-artifact@v3
       with:
-        name: 明日方舟dump模块
+        name: 崩坏3国服dump模块
         path: out/magisk_module_release/
