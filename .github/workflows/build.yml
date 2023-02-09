@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
       inputs:
         package_name:
-          description: "Package name of the game:"
+          description: "com.YostarJP.BlueArchive"
           required: true
 
 jobs:
@@ -23,5 +23,5 @@ jobs:
         ./gradlew :module:assembleRelease
     - uses: actions/upload-artifact@v3
       with:
-        name: zygisk-il2cppdumper
+        name: 碧蓝档案
         path: out/magisk_module_release/
